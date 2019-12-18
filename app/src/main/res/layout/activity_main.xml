@@ -1,18 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="323dp"
+        android:layout_height="168dp"
+        android:src="@drawable/icon"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="269dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="230dp"
+        android:width="220dp"
+        android:fontFamily="monospace"
+        android:text="Bitte geben Sie Ihren Namen ein!"
+        android:textColor="#000000"
+        android:textFontWeight="25" />
+
+    <EditText
+        android:id="@+id/EditTextNickName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="265dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="330dp"
+        android:width="220dp"
+        android:fontFamily="monospace"
+        android:text="Bitte tragen Sie Ihr Alter ein!"
+        android:textColor="#000000"
+        android:textFontWeight="25" />
+
+    <EditText
+        android:id="@+id/EditTextAlter"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="360dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimaryDark" />
+    <TextView
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="420dp"
+        android:width="220dp"
+        android:fontFamily="monospace"
+        android:text="EMail!"
+        android:textColor="#000000"
+        android:textFontWeight="25" />
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="450dp"
+        android:inputType="textWebEmailAddress|textPassword"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="510dp"
+        android:width="220dp"
+        android:fontFamily="monospace"
+        android:text="Passwort:"
+        android:textColor="#000000"/>
+    android:textFontWeight="25" />
+
+    <EditText
+        android:id="@+id/EditTextPasswort"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="520dp"
+        android:inputType="textWebPassword"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:layout_marginTop="560dp"
+        android:layout_marginLeft="100dp"
+
+        />
+</RelativeLayout>

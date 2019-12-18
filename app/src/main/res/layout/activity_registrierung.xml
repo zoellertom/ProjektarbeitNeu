@@ -12,16 +12,18 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="5dp"
         android:src="@drawable/icon"
+
         />
     <EditText
         android:id="@+id/nutzername"
         android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:height="50dp"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="60dp"
         />
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwort"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="400dp"
