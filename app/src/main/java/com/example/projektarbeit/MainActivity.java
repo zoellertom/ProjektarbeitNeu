@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText nickname;
     private EditText alter;
     private Button weiter;
-
+//hhhh
     //Variablen
     private String passwortV;
     private String emailV;
