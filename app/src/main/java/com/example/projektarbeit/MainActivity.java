@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
         User user = new User(name, alter, email, passwort);
 
         DatabaseHandler db=new DatabaseHandler(this);
-        db.addUser(user);
+        //schauen ob der typ schon drin ist
+        db.addUser(user); //typ hinzufügen
 
 
         System.out.println(name);

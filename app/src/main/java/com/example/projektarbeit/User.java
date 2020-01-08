@@ -48,7 +48,7 @@ public class User {
     {
         return id;
     }
-    public User()
+    public User(int i, String string, int parseInt, String cString, String s)
     {
         id=laufnummer+1;
     }

@@ -80,7 +80,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    /*
+
     public User getUser(int id)
     {
         SQLiteDatabase db=this.getReadableDatabase();
@@ -88,15 +88,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[] {String.valueOf(id)}, null, null, null,null);
         User user=null;
         if(c.moveToFirst())
-        {
 
-            user=new User(Integer.parseInt(c.getString(0)), c.getString(1),Integer.parseInt(c.getString(1)));
+
+            user=new User(Integer.parseInt(c.getString(0)), c.getString(1),Integer.parseInt(c.getString(2)),
+                    c.getString(3), c.getString(4));
             c.close();
             db.close();
-            return(s);
-        }
+            return(user);
+
 
     }
 
-     */
+
 }
