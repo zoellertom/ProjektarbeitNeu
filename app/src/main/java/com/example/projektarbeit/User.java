@@ -1,6 +1,6 @@
 package com.example.projektarbeit;
 
-public class Nutzer {
+public class User {
 
     private String name;
     private String email;
@@ -48,11 +48,11 @@ public class Nutzer {
     {
         return id;
     }
-    public Nutzer()
+    public User()
     {
         id=laufnummer+1;
     }
-    public Nutzer(String name, int alter,String email, String passwort)
+    public User(String name, int alter, String email, String passwort)
     {
         this.name=name;
         this.alter=alter;

@@ -71,7 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void objektErstellen(String name, int alter, String email, String passwort) {
 
-        Nutzer n = new Nutzer(name, alter, email, passwort);
+        User user = new User(name, alter, email, passwort);
+
+        DatabaseHandler db=new DatabaseHandler(this);
+        db.addUser(user);
+
 
         System.out.println(name);
         System.out.println(alter);
