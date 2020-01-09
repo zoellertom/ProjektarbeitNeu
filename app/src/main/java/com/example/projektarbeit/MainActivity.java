@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
 
+
+
     public void auslesen(View view) {
         if ((email.getText().length() != 0) && (passwort.getText().length() != 0) && (alter.getText().length() != 0) && (nickname.getText().length() != 0)) {
             emailV = email.getText().toString();
@@ -70,12 +72,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void objektErstellen(String name, int alter, String email, String passwort) {
+        //Nutzer aus der Activity
+        System.out.println("test") ;
+        System.out.println(name) ;
 
         User user = new User(name, alter, email, passwort);
+        //Nutzer aus der Datenbank
+        User dbUser;
+        //Erstellen der Datenbank
+        DatabaseHandler db=new DatabaseHandler(this); //Datenbank erstellen
+        //speichern des Namens aus der Activity
+        String usernameU=user.getName(); //gewünschten Namen (User) einlesen
+        //schauen ob der name schon drin ist
+        dbUser=db.getUser(usernameU);
+        if(dbUser!=null && dbUser.getName().equals(user.getName()))
+        {
+            Toast.makeText(this, "Bitte finde einen anderen Nutzernamen", Toast.LENGTH_SHORT).show();
 
-        DatabaseHandler db=new DatabaseHandler(this);
-        //schauen ob der typ schon drin ist
-        db.addUser(user); //typ hinzufügen
+        }
+        else
+        {
+            db.addUser(user); //typ hinzufügen
+            Toast.makeText(this, "Registrierung erfolgreich!", Toast.LENGTH_SHORT).show();
+            //openActivityMain();
+        }
+
 
 
         System.out.println(name);

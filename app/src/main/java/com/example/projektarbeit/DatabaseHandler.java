@@ -20,8 +20,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String EMAIL="email";
     private static final String PASSWORT="passwort";
     private static final String ALTER="alter";
-    private static final String POINT_ID="point_id";
-    private static final String ROUTE_ID="route_id";
+    //private static final String POINT_ID="point_id";
+    //  private static final String ROUTE_ID="route_id";
 
     public DatabaseHandler(Context c)
     {
@@ -37,8 +37,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             EMAIL + " VARCHAR2(30), " +
             PASSWORT + " VARCHAR2(30) NOT NULL, " +
             ALTER + " INTEGER, " +
-            POINT_ID + " INTEGER CONSTRAINT FOREIGN KEY, " +
-            ROUTE_ID + " INTEGER CONSTRAINT FOREIGN KEY" +
+         //   POINT_ID + " INTEGER CONSTRAINT FOREIGN KEY, " +
+         //   ROUTE_ID + " INTEGER CONSTRAINT FOREIGN KEY" +
             ");";
 
 
@@ -81,11 +81,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    public User getUser(int id)
+    public User getUser(String name)
     {
         SQLiteDatabase db=this.getReadableDatabase();
-        Cursor c=db.query(TABLE_USER, new String[]{USER_ID,NAME,ALTER,EMAIL,PASSWORT}, USER_ID + "=?",
-                new String[] {String.valueOf(id)}, null, null, null,null);
+        Cursor c=db.query(TABLE_USER, new String[]{USER_ID,NAME,ALTER,EMAIL,PASSWORT}, NAME + "=?",
+                new String[] {name}, null, null, null,null);
         User user=null;
         if(c.moveToFirst())
 
